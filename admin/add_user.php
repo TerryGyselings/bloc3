@@ -1,7 +1,23 @@
+<?php
+require('../config.php');
+  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+  if(!isset($_SESSION["username"])){
+    header("Location: ../login.php");
+    exit(); 
+  }
+  // Vérifiez si l'utilisateur est un admin, sinon redirigez-le vers la page index
+  if ($_SESSION['type'] !== 'admin') {
+  header("Location: ../index.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <?php
