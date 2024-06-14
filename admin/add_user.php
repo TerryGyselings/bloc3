@@ -1,47 +1,40 @@
 <?php
 require('../config.php');
-  // Initialiser la session
   session_start();
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
   if(!isset($_SESSION["username"])){
     header("Location: ../login.php");
     exit(); 
   }
-  // Vérifiez si l'utilisateur est un admin, sinon redirigez-le vers la page index
   if ($_SESSION['type'] !== 'admin') {
   header("Location: ../index.php");
   exit();
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ajout d'utilisateur</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 <?php
 require('../config.php');
 
 if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])){
-  // récupérer le nom d'utilisateur 
   $username = stripslashes($_REQUEST['username']);
   $username = mysqli_real_escape_string($conn, $username); 
-  // récupérer l'email 
   $email = stripslashes($_REQUEST['email']);
   $email = mysqli_real_escape_string($conn, $email);
-  // récupérer le mot de passe 
   $password = stripslashes($_REQUEST['password']);
   $password = mysqli_real_escape_string($conn, $password);
-  // récupérer le type (user | admin)
   $type = stripslashes($_REQUEST['type']);
   $type = mysqli_real_escape_string($conn, $type);
   
-    $query = "INSERT into `user` (username, email, type, password)
+    $req = "INSERT into `user` (username, email, type, password)
           VALUES ('$username', '$email', '$type', '".hash('sha256', $password)."')";
-    $res = mysqli_query($conn, $query);
+    $res = mysqli_query($conn, $req);
 
     if($res){
        echo "<div class='sucess'>

@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.box-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.box-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.box-button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ff8000;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.box-button:hover {
+    background-color: #ff6a00;
+}
+
+.box-register {
+    margin-top: 10px;
+}
+
+.box-register a {
+    color: #ff8000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.box-register a:hover {
+    color: #ff6a00;
+}
+
+.errorMessage {
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+/* Success message styling */
+.success {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.success h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.success p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.success a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8000;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.success a:hover {
+    background-color: #ff6a00;
+}
+
+/* Table styling */
+.box-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.box-table th, .box-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.box-table th {
+    background-color: #f2f2f2;
+}
+
+.box-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.box-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action button styling */
+.box-table .box-button {
+    width: auto;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.error {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.error h3 {
+    color: #d9534f;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.error p {
+    font-size: 16px;
+    color: #666;
+}
+
+.error a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.error a:hover {
+    background-color: #4cae4c;
+}
