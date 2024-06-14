@@ -19,7 +19,7 @@
     <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['']; ?>!</h1>
     <p>C'est votre espace utilisateur.</p>
-    <a href="login.php">Déconnexion</a>
+    <a href="logout.php">Déconnexion</a>
     </div>
   </body>
 </html>

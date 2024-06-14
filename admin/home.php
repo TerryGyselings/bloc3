@@ -25,7 +25,7 @@ require('../config.php');
     <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['username']; ?> dans votre espace admin</h1>
     <a href="add_user.php">Ajouter un utilisateur</a> | 
-    <a href="../login.php">Déconnexion</a>
+    <a href="../logout.php">Déconnexion</a>
     </ul>
   <div>
 <?php
