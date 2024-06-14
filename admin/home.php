@@ -45,7 +45,7 @@ require('../config.php');
   $res = mysqli_query($conn, $req);
 
   if($res) {
-    echo "<div class='success'>
+    echo "<div class='ok'>
           <h3>L'utilisateur a été mis à jour avec succès.</h3>
           <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
           </div>";
@@ -84,12 +84,12 @@ require('../config.php');
   $res = mysqli_query($conn, $req);
 
   if ($res) {
-    echo "<div class='success'>
+    echo "<div class='ok'>
           <h3>L'utilisateur a été supprimé avec succès.</h3>
           <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
     </div>";
   } else {
-    echo "<div class='error'>
+    echo "<div class='nok'>
           <h3>Erreur lors de la suppression de l'utilisateur.</h3>
           <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
     </div>";
@@ -107,7 +107,7 @@ require('../config.php');
             <td>{$row['username']}</td>
             <td>{$row['email']}</td>
             <td>{$row['type']}</td>
-            <td><a href='?edit_id={$row['id']}' class='box-button'>Modifier</a><a href='?delete_id={$row['id']}' class='box-button'>Supprimer</a></td>
+            <td><a href='?edit_id={$row['id']}' class='box-button'>Modifier</a><a href='?delete_id={$row['id']}' class='box-button-suppr'>Supprimer</a></td>
           </tr>";
   }
   echo "</table>";

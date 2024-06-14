@@ -19,7 +19,7 @@ if (isset($_POST['username'])){
   $password = mysqli_real_escape_string($conn, $password);
   $req = "SELECT * FROM `user` WHERE username='$username' and password='".hash('sha256', $password)."'";
   
-  $result = mysqli_query($conn,$req) or die(mysql_error());
+  $result = mysqli_query($conn,$req) or die(mysql_nok());
   
   if (mysqli_num_rows($result) == 1) {
     $user = mysqli_fetch_assoc($result);
@@ -43,7 +43,7 @@ if (isset($_POST['username'])){
   <a href="register.php">S'inscrire</a>
 </p>
 <?php if (! empty($message)) { ?>
-    <p class="errorMessage"><?php echo $message; ?></p>
+    <p class="nokMessage"><?php echo $message; ?></p>
 <?php } ?>
 </form>
 </body>
