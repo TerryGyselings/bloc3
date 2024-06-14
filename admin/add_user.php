@@ -45,7 +45,7 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUES
 }else{
 ?>
 <form class="box" action="" method="post">
-  <h1 class="box-title">Ajouter un utilisateur</h1>
+  <h1 class="box-titre">Ajouter un utilisateur</h1>
   <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required />
   <input type="text" class="box-input" name="email" placeholder="Email" required />
   <div>

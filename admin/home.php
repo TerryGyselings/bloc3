@@ -59,7 +59,7 @@ require('../config.php');
   $user = mysqli_fetch_assoc($result);
 ?>
 <form class="box" action="" method="post">
-  <h1 class="box-title">Modifier un utilisateur</h1>
+  <h1 class="box-titre">Modifier un utilisateur</h1>
   <input type="hidden" name="id" value="<?php echo $user['id']; ?>" />
   <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" value="<?php echo $user['username']; ?>" required />
   <input type="text" class="box-input" name="email" placeholder="Email" value="<?php echo $user['email']; ?>" required />
