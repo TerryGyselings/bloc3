@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'bloc3');
+define('DB_SERVER', '####');
+define('DB_USERNAME', '####');
+define('DB_PASSWORD', '####');
+define('DB_NAME', '####');
  
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
